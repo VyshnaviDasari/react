@@ -259,6 +259,16 @@ class Sidebar extends React.Component<any, any> {
                     Async Shorthand
                   </Menu.Item>
                 </Menu.Menu>
+                <Menu.Menu>
+                  <Menu.Item
+                    as={NavLink}
+                    exact
+                    to="/prototype-chat-people-picker"
+                    activeClassName="active"
+                  >
+                    Chat People Picker
+                  </Menu.Item>
+                </Menu.Menu>
               </Menu.Item>
             )}
             <Menu.Item active>
