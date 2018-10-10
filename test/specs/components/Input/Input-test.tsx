@@ -8,9 +8,8 @@ import { mountWithProvider } from 'test/utils'
 
 describe('Input', () => {
   isConformant(Input, {
-    eventTargets: {
-      onChange: 'input',
-    },
+    eventTargets: { onChange: 'input' },
+    usesWrapperSlot: true,
   })
   implementsShorthandProp(Input)('icon', Icon, { mapsValueToProp: 'name' })
 

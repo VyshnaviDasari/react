@@ -18,6 +18,7 @@ export interface IConformant {
   requiredProps?: object
   exportedAtTopLevel?: boolean
   rendersPortal?: boolean
+  usesWrapperSlot?: boolean
 }
 
 export const mount = (node, options?) => {
@@ -32,9 +33,10 @@ export const mount = (node, options?) => {
  * @param {React.Component|Function} Component A component that should conform.
  * @param {Object} [options={}]
  * @param {Object} [options.eventTargets={}] Map of events and the child component to target.
- * @param {boolean} [options.exportedAtTopLevel=false] Is this component exported as top level API
+ * @param {boolean} [options.exportedAtTopLevel=false] Is this component exported as top level API?
  * @param {boolean} [options.rendersPortal=false] Does this component render a Portal powered component?
  * @param {Object} [options.requiredProps={}] Props required to render Component without errors or warnings.
+ * @param {boolean} [options.usesWrapperSlot=false] Is this component using wrapper slot?
  */
 export default (Component, options: IConformant = {}) => {
   const {
@@ -42,6 +44,7 @@ export default (Component, options: IConformant = {}) => {
     exportedAtTopLevel = true,
     requiredProps = {},
     rendersPortal = false,
+    usesWrapperSlot = false,
   } = options
   const { throwError } = helpers('isConformant', Component)
 
@@ -61,6 +64,11 @@ export default (Component, options: IConformant = {}) => {
         component = component.childAt(0) // skip the additional wrap <div> of the FocusZone
       }
     }
+
+    if (usesWrapperSlot) {
+      component = component.childAt(0)
+    }
+
     return component
   }
 
