@@ -258,6 +258,9 @@ class Sidebar extends React.Component<any, any> {
                   >
                     Async Shorthand
                   </Menu.Item>
+                  <Menu.Item as={NavLink} exact to="/prototype-card" activeClassName="active">
+                    Card
+                  </Menu.Item>
                   <Menu.Item
                     as={NavLink}
                     exact
