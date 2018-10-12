@@ -29,6 +29,7 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
         <div>
           <Layout
             vertical
+            mainCSS={{ paddingTop: '5px' }}
             start={
               this.props.image ? (
                 <Image
@@ -74,20 +75,7 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
     return (
       <Layout
         vertical
-        start={
-          <Text
-            size="large"
-            content={this.props.content}
-            styles={() => ({
-              display: '-webkit-box',
-              WebkitLineClamp: 3,
-              WebkitBoxOrient: 'vertical',
-              overflow: 'hidden',
-              lineHeight: 1.65,
-              textOverflow: 'ellipsis',
-            })}
-          />
-        }
+        start={this.renderContent()}
         end={<Text size="smaller" content="6:43 AM" />}
         styles={() => ({
           overflow: 'hidden',
@@ -99,6 +87,23 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
           boxShadow: ' 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19)',
         })}
       />
+    )
+  }
+  renderContent(): React.ReactNode {
+    return (
+      <div
+        style={{
+          display: '-webkit-box',
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+          lineHeight: 1.65,
+          textOverflow: 'ellipsis',
+        }}
+      >
+        <Avatar size={26} image="public/images/avatar/small/matt.jpg" />
+        <Text size="large" content={this.props.content} />
+      </div>
     )
   }
 }
