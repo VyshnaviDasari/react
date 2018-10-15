@@ -264,6 +264,14 @@ class Sidebar extends React.Component<any, any> {
                   <Menu.Item
                     as={NavLink}
                     exact
+                    to="/prototype-collections-layout"
+                    activeClassName="active"
+                  >
+                    Collections Layout
+                  </Menu.Item>
+                  <Menu.Item
+                    as={NavLink}
+                    exact
                     to="/prototype-employee-card"
                     activeClassName="active"
                   >

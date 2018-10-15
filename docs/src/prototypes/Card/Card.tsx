@@ -39,8 +39,8 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
                     borderRadius: '2%',
                     border: '1px solid #ededed',
                     padding: ' 0px',
-                    width: '240px',
-                    height: '134px',
+                    width: '280px',
+                    height: '174px',
                     boxShadow: ' 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19)',
                   })}
                 />
@@ -53,7 +53,7 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
               <Text
                 content={this.props.text}
                 styles={{
-                  width: '242px',
+                  width: '280px',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   WebkitBoxOrient: 'vertical',
@@ -62,7 +62,7 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
               />
             }
             styles={() => ({
-              width: '242px',
+              width: '280px',
               height: '170px',
               margin: '10px',
             })}
@@ -82,8 +82,8 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
           borderRadius: '2%',
           border: '1px solid #ededed',
           padding: '5px',
-          width: '240px',
-          height: '134px',
+          width: '280px',
+          height: '174px',
           boxShadow: ' 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19)',
         })}
       />
@@ -94,10 +94,10 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
       <div
         style={{
           display: '-webkit-box',
-          WebkitLineClamp: 3,
+          WebkitLineClamp: 4,
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden',
-          lineHeight: 1.65,
+          lineHeight: 2.1,
           textOverflow: 'ellipsis',
         }}
       >
