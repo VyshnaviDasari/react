@@ -36,12 +36,11 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
                   src={this.props.image}
                   styles={() => ({
                     overflow: 'hidden',
-                    borderRadius: '2%',
+                    borderRadius: '1%',
                     border: '1px solid #ededed',
                     padding: ' 0px',
                     width: '280px',
                     height: '174px',
-                    boxShadow: ' 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19)',
                   })}
                 />
               ) : (
@@ -63,10 +62,11 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
             }
             styles={() => ({
               width: '280px',
-              height: '210px',
+              height: '223px',
               marginRight: '75px',
               marginBottom: '30px',
               marginTop: '20px',
+              backgroundColor: 'snow',
             })}
           />
         </div>
@@ -81,12 +81,11 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
         end={<Text size="smaller" content="6:43 AM" />}
         styles={() => ({
           overflow: 'hidden',
-          borderRadius: '2%',
+          borderRadius: '1%',
           border: '1px solid #ededed',
           padding: '5px',
           width: '280px',
           height: '174px',
-          boxShadow: ' 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19)',
         })}
       />
     )
