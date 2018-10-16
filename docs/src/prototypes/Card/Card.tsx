@@ -63,8 +63,10 @@ class Card extends React.Component<Extendable<ICardProps>, any> {
             }
             styles={() => ({
               width: '280px',
-              height: '170px',
-              margin: '10px',
+              height: '210px',
+              marginRight: '75px',
+              marginBottom: '30px',
+              marginTop: '20px',
             })}
           />
         </div>

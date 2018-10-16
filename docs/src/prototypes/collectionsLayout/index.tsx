@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Header from './components/Header'
 import HeaderThree from './components/HeaderThree'
-import Footer from './components/Footer'
 import Main from './components/Main'
 import Navigation from './components/Navigation'
 import { Grid } from '@stardust-ui/react'
@@ -17,9 +16,7 @@ class CollectionsLayoutPrototype extends React.Component<any, any> {
           <div style={{ borderRight: '1px solid lightgray' }}>
             <Navigation />
           </div>
-          <div>
-            <Main />
-          </div>
+          <Main />
         </Grid>
       </div>
     )
