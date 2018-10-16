@@ -37,6 +37,18 @@ const Router = () => (
           />,
           <DocsLayout
             exact
+            key="/prototype-card"
+            path="/prototype-card"
+            component={require('./prototypes/Card/index').default}
+          />,
+          <DocsLayout
+            exact
+            key="/prototype-collections-layout"
+            path="/prototype-collections-layout"
+            component={require('./prototypes/collectionsLayout/index').default}
+          />,
+          <DocsLayout
+            exact
             key="/prototype-employee-card"
             path="/prototype-employee-card"
             component={require('./prototypes/employeeCard/index').default}
